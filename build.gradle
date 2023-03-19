@@ -19,3 +19,11 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+//일반 Jar 생성
+task buildJar(type: Jar) {
+    compileJava{
+        options.encoding = "utf-8"
+    }
+    with jar
+}
